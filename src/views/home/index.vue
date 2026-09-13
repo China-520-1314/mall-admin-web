@@ -245,12 +245,10 @@ const chartOption = computed(() => {
       </el-row>
     </div>
     <el-card class="mine-layout">
-      <div style="text-align: center">
-        <img width="140px" height="140px"
-          src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/qrcode_for_macrozheng_258.jpg">
-      </div>
-      <div style="text-align: center">扫码关注作者<span class="color-main">公众号</span></div>
-      <div style="text-align: center;margin-top: 5px">获取更多技术干货</div>
+      <div class="quick-title">常用功能</div>
+      <div class="quick-description">快速进入商城日常管理</div>
+      <el-button type="primary" plain @click="$router.push('/pms/product')">商品管理</el-button>
+      <el-button type="success" plain @click="$router.push('/oms/order')">订单管理</el-button>
     </el-card>
     <div class="un-handle-layout">
       <div class="layout-title">待处理事务</div>
@@ -512,5 +510,18 @@ const chartOption = computed(() => {
 .address-content {
   padding: 20px;
   font-size: 18px
+}
+
+.quick-title {
+  margin-bottom: 12px;
+  color: #303133;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.quick-description {
+  margin-bottom: 22px;
+  color: #909399;
+  font-size: 14px;
 }
 </style>
